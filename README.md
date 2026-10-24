@@ -19,6 +19,10 @@ This is a simulator only. It does not change operating-system firewall settings,
 
 Rules are evaluated from top to bottom. The first matching rule decides the outcome; traffic that matches no rule is denied by default.
 
+## Smoke check
+
+The sample allowed HTTPS from the trusted subnet, denied a blocked lab host, and denied traffic that matched no allow rule.
+
 ## Findings
 
 The sample demonstrates why rule ordering and a default-deny policy matter. Each decision includes the rule reason so the result can be reviewed.
