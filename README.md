@@ -31,6 +31,8 @@ The sample demonstrates why rule ordering and a default-deny policy matter. Each
 
 The prototype uses hard-coded rules and packets. Next steps include loading a validated rules file, adding input validation, and showing the decision path for each packet.
 
-## Screenshots
+## Demo screenshot
 
-Add a terminal screenshot of the sample decisions.
+![Firewall simulator sample decisions](screenshots/firewall-simulator-demo.png)
+
+The example uses synthetic packets; it does not change host firewall settings.
