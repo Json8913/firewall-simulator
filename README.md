@@ -2,6 +2,8 @@
 
 A small Python program that evaluates synthetic traffic against an ordered set of firewall rules and prints an auditable allow or deny decision.
 
+**Author:** Jason Santos Ritchie
+
 **Stage:** Initial prototype with numbered rule traces.
 
 ## Scope and safety
