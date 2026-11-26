@@ -15,6 +15,14 @@ This is a simulator only. It does not change operating-system firewall settings,
 - Python 3.10 or newer
 - No third-party packages
 
+## Desktop interface
+
+Run the desktop app with:
+
+    python3 gui.py
+
+The window shows the ordered sample rules and a decision trace for the included synthetic packets. It does not change host firewall settings.
+
 ## Usage
 
     python3 firewall_simulator.py
