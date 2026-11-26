@@ -35,20 +35,21 @@ SAMPLE_PACKETS = [
 ]
 
 
-def decide(packet: dict) -> tuple[str, str]:
-    for rule in RULES:
+def decide(packet: dict) -> tuple[str, str, str]:
+    for number, rule in enumerate(RULES, start=1):
         if rule.matches(packet):
-            return rule.action.upper(), rule.reason
-    return "DENY", "default deny"
+            return rule.action.upper(), rule.reason, str(number)
+    return "DENY", "default deny", "default"
 
 
 def main() -> None:
-    print("Source          Protocol  Port  Decision  Reason")
-    print("-" * 76)
+    print("Source          Protocol  Port  Decision  Rule     Reason")
+    print("-" * 88)
     for packet in SAMPLE_PACKETS:
-        action, reason = decide(packet)
+        action, reason, rule_number = decide(packet)
         print(f"{packet['source']:<15} {packet['protocol']:<8} "
-              f"{packet['destination_port']:<5} {action:<8} {reason}")
+              f"{packet['destination_port']:<5} {action:<8} "
+              f"{rule_number:<8} {reason}")
 
 
 if __name__ == "__main__":
