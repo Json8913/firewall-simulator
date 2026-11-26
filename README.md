@@ -15,7 +15,8 @@ This is a simulator only. It does not change operating-system firewall settings,
 ## Requirements
 
 - Python 3.10 or newer
-- No third-party packages
+- No third-party Python packages
+- Tkinter for the desktop interface
 
 ## Desktop interface
 
@@ -41,7 +42,7 @@ The sample demonstrates why rule ordering and a default-deny policy matter. Each
 
 ## Current limits and next steps
 
-The prototype uses hard-coded rules and packets. Next steps include loading a validated rules file, adding input validation, and showing the decision path for each packet.
+The prototype uses hard-coded rules and packets. Next steps include loading a rules file and validating its contents.
 
 ## Demo screenshot
 
