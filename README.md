@@ -2,7 +2,7 @@
 
 A small Python program that evaluates synthetic traffic against an ordered set of firewall rules and prints an auditable allow or deny decision.
 
-**Stage:** Initial prototype.
+**Stage:** Initial prototype with numbered rule traces.
 
 ## Scope and safety
 
@@ -17,7 +17,7 @@ This is a simulator only. It does not change operating-system firewall settings,
 
     python3 firewall_simulator.py
 
-Rules are evaluated from top to bottom. The first matching rule decides the outcome; traffic that matches no rule is denied by default.
+Rules are evaluated from top to bottom. The first matching rule decides the outcome; traffic that matches no rule is denied by default. Each printed decision now identifies the matching rule number, or `default` when no rule matches.
 
 ## Smoke check
 
@@ -25,7 +25,7 @@ The sample allowed HTTPS from the trusted subnet, denied a blocked lab host, and
 
 ## Findings
 
-The sample demonstrates why rule ordering and a default-deny policy matter. Each decision includes the rule reason so the result can be reviewed.
+The sample demonstrates why rule ordering and a default-deny policy matter. Each decision includes its reason and rule reference so the result can be reviewed against the configured rule list.
 
 ## Current limits and next steps
 
