@@ -1,5 +1,7 @@
 # Firewall Simulator
 
+[![Checks](https://github.com/Json8913/firewall-simulator/actions/workflows/checks.yml/badge.svg?branch=main)](https://github.com/Json8913/firewall-simulator/actions/workflows/checks.yml)
+
 A small Python program that evaluates synthetic traffic against an ordered set of firewall rules and prints an auditable allow or deny decision.
 
 **Author:** Jason Santos Ritchie
